@@ -11,3 +11,24 @@
         document.body.classList.toggle("light-mode");
     })
 })();
+function sendEmail() {
+    var name = document.querySelector("input[type='text']").value;
+    var email = document.querySelector("input[type='email']").value;
+    var subject = document.querySelector("#subject").value;
+    var message = document.querySelector("#message").value;
+    var recipient = "vasu.namdev.work@gmail.com"; // Replace with your email address
+
+    Email.send({
+        Host: "smtp.gmail.com",
+        Username: email,
+        Password: "your-email-password",
+        To: recipient,
+        From: email,
+        Subject: subject,
+        Body: message
+    }).then(
+        message => alert("Email sent successfully!")
+    ).catch(
+        error => alert("Failed to send email. Error: " + error)
+    );
+}
