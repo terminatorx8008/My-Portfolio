@@ -5,9 +5,9 @@
   list-style: none;
 }
 
-:root {
+.light-mode {
   --color-primary: #191d2b;
-  --color-secondary: #fea6af;
+  --color-secondary: #66c8f5;
   --color-white: #FFFFFF;
   --color-black: #000;
   --color-grey0: #f8f8f8;
@@ -21,7 +21,7 @@
   --box-shadow-1: 0 3px 15px rgba(0,0,0,.3);
 }
 
-.light-mode {
+:root{
   --color-primary: #FFFFFF;
   --color-secondary: #66c8f5;
   --color-white: #454e56;
@@ -32,7 +32,7 @@
   --color-grey-3: #6c7983;
   --color-grey-4: #454e56;
   --color-grey-5: #f8f8f8;
-  --color-grey-6: #12181b;
+  --color-grey-6: #42728a;
 }
 
 body {
@@ -63,7 +63,7 @@ section {
   position: absolute;
   left: 0;
   top: 0;
-  padding: 3rem 8rem;
+  padding: 3rem 10rem;
 }
 
 .container {
@@ -151,7 +151,7 @@ section {
 /*Header-content*/
 .header-content {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 40% 1fr;
   min-height: 100vh;
 }
 .header-content .left-header {
@@ -171,17 +171,21 @@ section {
   clip-path: polygon(0 0, 46% 0, 79% 100%, 0% 100%);
 }
 .header-content .left-header .image {
-  border-radius: var(--br-sm-2);
-  height: 90%;
-  width: 68%;
+  border-radius: 50px;
+  height: 80%;
+  width: 80%;
   margin-left: 4rem;
-  background-color: var(--color-black);
+  background-color: rgba(0, 0, 0, .3);
   transition: all 0.4s ease-in-out;
 }
 .header-content .left-header .image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: scale-down;
+  transition: all 0.4s ease-in-out;
+}
+.header-content .left-header .image:hover {
+  scale: 1.1;
   transition: all 0.4s ease-in-out;
 }
 .header-content .right-header {
@@ -696,7 +700,7 @@ section {
   padding-left: 0;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 730px) {
   header {
     padding: 0 !important;
   }
@@ -807,6 +811,7 @@ section {
 
   .contact-item {
     flex-direction: column;
+    align-items: flex-start!important;
     margin: 1rem 0;
   }
   .contact-item p {
@@ -914,9 +919,11 @@ section {
     grid-template-columns: repeat(1, 1fr);
     padding-bottom: 6rem;
   }
-
+  .left-header{
+    margin-top: 18px;
+  }
   .left-header .h-shape {
-    display: none;
+    display: block;
   }
   .left-header .image {
     width: 90% !important;
