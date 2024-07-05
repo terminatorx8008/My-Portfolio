@@ -754,7 +754,7 @@ section {
     padding-top: 3rem;
   }
 
-  .header-content .left-header .image {
+  .header-content .left-header .flip-images {
     margin: 0 auto;
     width: 90%;
   }
@@ -948,7 +948,7 @@ section {
   .left-header .h-shape {
     display: block;
   }
-  .left-header .image {
+  .left-header .flip-images {
     width: 90% !important;
     margin: 0 auto !important;
   }
