@@ -943,6 +943,7 @@ section {
     padding-bottom: 6rem;
   }
   .left-header{
+    height: 500px;
     margin-top: 18px;
   }
   .left-header .h-shape {
@@ -951,6 +952,10 @@ section {
   .left-header .flip-images {
     width: 90% !important;
     margin: 0 auto !important;
+  }
+
+  .flip-images img {
+    object-fit: cover!important;
   }
 
   .right-header {
