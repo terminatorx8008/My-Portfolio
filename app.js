@@ -11,7 +11,6 @@
         document.body.classList.toggle("light-mode");
         const card = document.querySelector('.header-content .left-header .flip-images');
         card.classList.toggle('flipped');
-
     })
 })();
 function sendEmail() {

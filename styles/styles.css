@@ -199,17 +199,21 @@ section {
   transform: rotateY(180deg);
 }
 
-.header-content .left-header .flip-images:hover .image-front {
-  transform: rotateY(180deg);
-}
+.header-content .left-header .flip-images:hover .image-front,
 .header-content .left-header .flip-images.flipped .image-front {
   transform: rotateY(180deg);
 }
-.header-content .left-header .flip-images:hover .image-back {
+
+.header-content .left-header .flip-images.flipped:hover .image-front {
   transform: rotateY(0deg);
 }
+
+.header-content .left-header .flip-images:hover .image-back,
 .header-content .left-header .flip-images.flipped .image-back {
   transform: rotateY(0deg);
+}
+.header-content .left-header .flip-images.flipped:hover .image-back {
+  transform: rotateY(180deg);
 }
 
 .header-content .left-header .flip-images img {
